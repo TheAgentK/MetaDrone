@@ -10,19 +10,19 @@ using System.Collections;
 
 namespace Meta.Apps.SDKGuide
 {
-	public class OnGrabTestScript : MetaBehaviour
+    public class OnGrabTestScript : MonoBehaviour
 	{
 		public void OnGrab()
 		{
-			renderer.material.color = Color.red;
+			GetComponent<Renderer>().material.color = Color.red;
 		}
 		public void OnHold()
 		{
-			renderer.material.color = Color.green;
+			GetComponent<Renderer>().material.color = Color.green;
 		}
 		public void OnRelease()
 		{
-			renderer.material.color = Color.blue;
+			GetComponent<Renderer>().material.color = Color.blue;
 		}
 	}
 }

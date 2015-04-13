@@ -11,24 +11,24 @@ using System.Collections;
 namespace Meta.Apps.SDKGuide
 {
 
-	public class OnTouchEnterTestScript : MetaBehaviour
+    public class OnTouchEnterTestScript : MonoBehaviour
 	{
 		public void OnTouchEnter()
 		{
-			renderer.material.color = Color.red;
+			GetComponent<Renderer>().material.color = Color.red;
 //			Debug.Log("OnTouchEnter");
 		}
 		public void OnTouchHold()
 		{
-			renderer.material.color = Color.green;
+			GetComponent<Renderer>().material.color = Color.green;
 		}
 		public void OnTouchDwell()
 		{
-			renderer.material.color = Color.cyan;
+			GetComponent<Renderer>().material.color = Color.cyan;
 		}
 		public void OnTouchExit()
 		{
-			renderer.material.color = Color.blue;
+			GetComponent<Renderer>().material.color = Color.blue;
 		}
 	}
 }

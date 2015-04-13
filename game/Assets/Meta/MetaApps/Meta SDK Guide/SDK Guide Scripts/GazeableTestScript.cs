@@ -11,23 +11,23 @@ using System.Collections;
 namespace Meta.Apps.SDKGuide
 {
 
-	public class GazeableTestScript : MetaBehaviour
+	public class GazeableTestScript : MonoBehaviour
 	{
 		public void OnGazeEnter()
 		{
-			renderer.material.color = Color.red;
+			GetComponent<Renderer>().material.color = Color.red;
 		}
 		public void OnGazeHold()
 		{
-			renderer.material.color = Color.green;
+			GetComponent<Renderer>().material.color = Color.green;
 		}
 		public void OnGazeDwell()
 		{
-			renderer.material.color = Color.cyan;
+			GetComponent<Renderer>().material.color = Color.cyan;
 		}
 		public void OnGazeExit()
 		{
-			renderer.material.color = Color.blue;
+			GetComponent<Renderer>().material.color = Color.blue;
 		}
 	}
 }

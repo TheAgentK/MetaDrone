@@ -1,100 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{FCB26EC9-CE13-7FE5-A181-B4AF37EDF801}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
-	<BaseDirectory>Assets</BaseDirectory>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AF7E356-2D58-7119-FE6C-C1ED31A62E64}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>Assets</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_6_1;UNITY_4_6;UNITY_STANDALONE_WIN;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_4_6_FEATURES;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_PRO_LICENSE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_0_0;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-	<Reference Include="System" />
-    <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="System.Xml.Linq" />
-	<Reference Include="UnityEngine">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
-	</Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraFollow.cs" />
-     <Compile Include="Assets\HandTracking.cs" />
-     <Compile Include="Assets\Kill.cs" />
-     <Compile Include="Assets\LeftHandTracking.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\GazeableTestScript.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\MetaSDKGuideApp.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnGrabTestScript.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnPinchTestScript.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnSwipeTestScript.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnTouchEnterTestScript.cs" />
-     <Compile Include="Assets\Meta\MetaApps\Meta Welcome\Scripts\MetaWelcome.cs" />
-     <Compile Include="Assets\PitchTextUpdate.cs" />
-     <Compile Include="Assets\RelativeReorient.cs" />
-     <Compile Include="Assets\TextUpdate.cs" />
-     <Compile Include="Assets\WSS.cs" />
-     <Compile Include="Assets\YawTextUpdate.cs" />
-     <Compile Include="Assets\YawTracking.cs" />
-     <None Include="Assets\Plugins\SocketIO\JSONObject\readme.txt" />
-     <None Include="Assets\Meta Packages\Vectrosity\Documentation\What to import!.txt" />
-     <None Include="Assets\Plugins\SocketIO\readme.txt" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingBlur.shader" />
-     <None Include="Assets\Meta Packages\LeanTween\LeanTween-ReadMe.txt" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparent.shader" />
-     <None Include="Assets\Meta Packages\Vectrosity\Documentation\Vectrosity changelog.txt" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingInclude.cginc" />
-     <None Include="Assets\Meta\MetaCore\Shaders\TransparentUnlit.shader" />
-     <None Include="Assets\Meta\MetaSpace\Shaders\Shaders\Shield.shader" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingComposite.shader" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilOpaqueZ.shader" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilOpaque.shader" />
-     <None Include="Assets\Meta Packages\Vectrosity\Documentation\Vectrosity Upgrade Guide.txt" />
-     <None Include="Assets\Meta\MetaCore\Shaders\MetaXrayEffect.shader" />
-     <None Include="Assets\Meta\MetaDocs\META EULA.txt" />
-     <None Include="Assets\Meta\MetaSpace\Shaders\Particle AddMeta.shader" />
-     <None Include="Assets\Meta\MetaSpace\MetaFonts\Arial Bold\3DTextTextured.shader" />
-     <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="Vectrosity">
- <HintPath>C:/Users/Hacker/GitHub/meta_drone/new-interface/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
- </Reference>
- <Reference Include="Meta">
- <HintPath>C:/Users/Hacker/GitHub/meta_drone/new-interface/Assets/MetaDLL/Meta.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\HandTracking.cs" />
+    <Compile Include="Assets\HandTrackingLeft.cs" />
+    <Compile Include="Assets\HandTrackingRight.cs" />
+    <Compile Include="Assets\Kill.cs" />
+    <Compile Include="Assets\Meta\Examples\Scripts\CameraFeedExample.cs" />
+    <Compile Include="Assets\Meta\Examples\Scripts\MarkerTrackerExample.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\GazeableTestScript.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\MetaSDKGuideApp.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnGrabTestScript.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnPinchTestScript.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnSwipeTestScript.cs" />
+    <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnTouchEnterTestScript.cs" />
+    <Compile Include="Assets\OnGrabDroneScript.cs" />
+    <Compile Include="Assets\StartDrone.cs" />
+    <Compile Include="Assets\WSS.cs" />
+    <None Include="Assets\Plugins\SocketIO\JSONObject\readme.txt" />
+    <None Include="Assets\Plugins\SocketIO\readme.txt" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingBlur.shader" />
+    <None Include="Assets\Meta Packages\LeanTween\LeanTween-ReadMe.txt" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparent.shader" />
+    <None Include="Assets\Meta Packages\Vectrosity\Documentation\Vectrosity changelog.txt" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingInclude.cginc" />
+    <None Include="Assets\Meta\MetaCore\Shaders\TransparentUnlit.shader" />
+    <None Include="Assets\Meta\MetaSpace\Shaders\Shaders\Shield.shader" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingComposite.shader" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilOpaqueZ.shader" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilOpaque.shader" />
+    <None Include="Assets\Meta\MetaCore\Shaders\MetaXrayEffect.shader" />
+    <None Include="Assets\Meta\MetaDocs\META EULA.txt" />
+    <None Include="Assets\Meta\MetaSpace\Shaders\Particle AddMeta.shader" />
+    <None Include="Assets\Meta\MetaSpace\MetaFonts\Arial Bold\3DTextTextured.shader" />
+    <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:\Program Files\Unity\Editor\Data\UnityExtensions\Unity\GUISystem\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Vectrosity">
+      <HintPath>C:\Users\Praktikum\Desktop\MetaDrone\meta_drone-ksi\game\Assets\Meta Packages\Vectrosity\Vectrosity.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta">
+      <HintPath>C:\Users\Praktikum\Desktop\MetaDrone\meta_drone-ksi\game\Assets\MetaDLL\Meta.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E68CB257-988D-23F9-606F-C244B0AAD3FC}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{C4670D74-53BA-CADB-D209-62996F2B0691}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -104,5 +101,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

@@ -4,23 +4,30 @@ using Meta;
 using SocketIO;
 using UnityEngine.UI;
 
-public class Kill : MetaBehaviour {
-
-	// Use this for initialization
-	public Text t;
-	void Start () {
+public class Kill : MonoBehaviour {
 	
+	public bool isStarted = false;
+	
+	public MeshRenderer arrowCenterLeft = null;
+	public MeshRenderer arrowCenterRight = null;
+	public MeshRenderer arrowCenterDefault = null;
+	
+	// Use this for initialization
+	void Start () {
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Hand[] hands = Meta.Hands.GetHands();
-		if (hands.Length == 2 && Meta.Hands.left.isValid && Meta.Hands.right.isValid) {//all hands present and accounted for
-			if(Meta.Hands.left.handOpenness > 31 && Meta.Hands.right.handOpenness > 35){//gotta kill it!
-				//gameObject.GetComponent<SocketIOComponent>().Emit ("kill");
-				t.GetComponent<Text>().color = Color.red;
-			}
-			t.GetComponent<Text>().text = (Mathf.Round(Meta.Hands.left.handOpenness * 10) / 10.0) + ":" + (Mathf.Round(Meta.Hands.right.handOpenness * 10) / 10.0);
+		if (Meta.Hands.right.gesture.type.Equals (MetaGesture.GRAB) && Meta.Hands.left.gesture.type.Equals (MetaGesture.GRAB) && isStarted == true) {
+			setColorToAll (Color.red);
+			isStarted = false;
 		}
+	}
+	
+	private void setColorToAll(Color _color){
+		arrowCenterLeft.material.color = _color;
+		arrowCenterRight.material.color = _color;
+		arrowCenterDefault.material.color = _color;
 	}
 }

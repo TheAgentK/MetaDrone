@@ -28,7 +28,7 @@ namespace Meta.Apps.SDKGuide
 		/// Includes example scripts called OnTouchEnterTestScript, OnGrabTestScript, OnSwipeTestScript.
 		/// </para>
 		/// </remarks>
-		public class MetaSDKGuideApp : MetaBehaviour
+        public class MetaSDKGuideApp : MonoBehaviour
 		{
 			#region Member variables
 

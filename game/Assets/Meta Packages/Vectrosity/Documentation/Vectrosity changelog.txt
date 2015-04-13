@@ -1,6 +1,111 @@
 Vectrosity Release Notes
 ------------------------
 
+Vectrosity 4.0.5
+
+Fixes:
+	• SetCamera3D works properly even if the canvas hasn't been set up yet.
+	• VectorLine.smoothWidth works properly.
+
+-----------
+
+Vectrosity 4.0.4
+
+Changes:
+	• VectorLine.Selected can use an additional extraLength parameter, which is similar to extraWidth except it adds  the specified distance to the beginning and end of each line segment for the purposes of checking the line.
+
+Fixes:
+	• Lines that use a drawTransform where some of the axes are scaled to 0 no longer cause a "Screen position out of view frustum" error when the scene view is active.
+
+-----------
+
+Vectrosity 4.0.3
+
+Changes:
+	• Requires Unity 4.6f1 or higher, although it currently won't work with Unity 5, until Unity 5 integrates the 4.6f1 changes (which it doesn't as of Unity 5.0b12). If you need to use Vectrosity 4 with Unity 5, stick with 4.0.2 for now.
+	• TankZone is included again.
+
+Fixes:
+	• Works with RenderMode property changes in Unity 4.6f1.
+	• Joins.Weld with continuous lines using Draw3D works properly.
+	• End caps are drawn correctly when using Draw3D.
+	• Using a VectorLine.drawEnd of 0 with a discrete line erases the entire line instead of retaining the first line segment.
+	• VectorLine.active works. This also means VectorManager.ObjectSetup stuff works properly.
+
+-----------
+
+Vectrosity 4.0.2
+
+Fixes:
+	• Changing VectorLine.textureOffset after adding points to .points2 or .points3, and before calling Draw, no longer causes an error.
+	• VectorLine.capLength is taken into account when using VectorLine.textureScale.
+	• Updated some scripts for Unity 5 compatibility.
+
+-----------
+
+Vectrosity 4.0.1
+
+Fixes:
+	• Adding points to VectorLine.points2 or points3 works when drawing VectorPoints.
+	• VectorPoints.Draw3D draws quads correctly.
+
+-----------
+
+Vectrosity 4.0
+
+Changes:
+	• Lots of stuff! Vectrosity now uses Unity 4.6 UI functions. See the Vectrosity 4 upgrade guide for details about upgrading existing code from Vectrosity 3.
+	• Removed VectorLine.SetCamera and VectorLine.GetCamera.
+	• Added VectorLine.canvas and VectorLine.canvas3D static variables.
+	• VectorLine constructors can use List<Vector2> and List<Vector3> in addition to Vector2[] and Vector3[] arrays.
+	• The array supplied in the VectorLine constructor is no longer used after the VectorLine is created; use VectorLine.points2 or VectorLine.points3 instead.
+	• VectorLine.points2 is now List<Vector2> instead of a Vector2[] array, so lines can be dynamically resized by using List functions such as Add, RemoveAt, etc.
+	• VectorLine.points3 is now List<Vector3> instead of a Vector3[] array, and can be resized as described above.
+	• VectorLine constructors no longer use colors or color arrays. Instead colors are set after creating the line.
+	• VectorLine.color can be used to set the color for all segments in the line. Also, it no longer returns the first line segment color; VectorLine.color is always the "true" color of the line, even if all the line segments have been set to different values when using SetColor or SetColors.
+	• VectorLine.SetColors can use List<Color> in addition to a Color[] array.
+	• VectorLine.SetWidths can use List<float> or List<int> in addition to float[] and int[] arrays.
+	• Removed VectorLine.vectorLayer and VectorLine.vectorLayer3D.
+	• Removed VectorLine.useMeshLines and VectorLine.useMeshPoints.
+	• Added VectorLine.SetCanvasCamera, which is shortcut for setting the canvas.renderMode to RenderMode.OverlayCamera and setting the canvas.worldCamera to a specified camera.
+	• Removed VectorLine.SetCameraRenderTexture. Instead the camera rendering to a texture can be set with VectorLine.SetCanvasCamera.
+	• Removed VectorLine.SetDepth.
+	• Removed VectorLine.SetVectorCamDepth.
+	• Removed VectorLine.vectorObject.
+	• Added VectorLine.rectTransform.
+	• Removed VectorLine.SetLineParameters and VectorLine.MakeLine.
+	• Removed VectorLine.sortingOrder and VectorLine.sortingLayerID.
+	• Removed VectorLine.depth.
+	• Added VectorLine.drawDepth, where lines with higher numbers are drawn on top of lines with lower numbers.
+	• VectorLine.Resize only accepts an integer now, which non-destructively resizes the points list to the specified value (existing points in the list are untouched).
+	• Removed VectorLine.ZeroPoints. Instead you can use List.Clear() with VectorLine.points2/points3.
+	• Removed VectorLine.ResetTextureScale. Instead you can set line.textureScale to 0 and re-draw the line.
+	• Removed VectorLine.minDrawIndex and VectorLine.maxDrawIndex.
+	• Added VectorLine.endPointsUpdate, which is the number of points from the end of the line that's updated when drawn, and the rest is left untouched. This is an optimization used primarily when dynamically extending a line, where most of it remains the same and doesn't need to be re-computed, such as drawing a line with the mouse.
+	• VectorLine.MakeRect, when passing in a Rect, draws from the bottom-up, making it consistent with screen space coordinates.
+	• Screen resolution changes no longer affect existing lines.
+	• Removed VectorLine.mesh.
+	• The default material for VectorLines (if no material is supplied) now uses the UI/Default shader.
+	• In addition to the 65K vertex limit per line, there is a 65K total vertex limit for all lines. So e.g. using two continuous lines with 10000 points each (40K vertices) will fail.
+	• Typically 18% - 30% faster, depending on the type of line being drawn.
+
+Known issues:
+	• VectorLine.active does nothing, due to a Unity bug in 4.6b19, which has been verified and should be fixed in a future version. Once it's fixed, VectorLine.active should work without needing an update to Vectrosity. In the meantime, a possible workaround is to disable/enable VectorLine.canvas, though that will affect all VectorLines (but that may indeed be what you actually want). For individual lines, another possibility is to set VectorLine.drawEnd to 0 and re-draw the line to "deactivate" it, then set drawEnd back to points.Count-1 and re-draw to "reactivate" it.
+	However, this issue with VectorLine.active prevents VectorManager.ObjectSetup from working properly with Visibility.Dynamic and Visibility.Static. The TankZone demo has been updated for Vectrosity 4 but is currently not included because it relies heavily on VectorLine.active and therefore doesn't really work correctly.
+	• Setting VectorLine.canvas.sortingOrder has no apparent effect, due to a Unity bug in 4.6b19. It can be worked around by first changing the canvas sorting order, then using VectorLine.canvas.gameObject.SetActive(false) followed immediately by VectorLine.canvas.gameObject.SetActive(true), which forces the correct sorting order.
+
+-----------
+
+Vectrosity 3.1.2
+
+Changes:
+	• VectorLine.SetWidth has the same options as SetColor now. Namely, SetWidth(width) sets the entire line to the specified width, SetWidth(width, index) sets only the line segment indicated by the index to the specified width, and SetWidth(width, startIndex, endIndex) sets all the line segments from the start to the end indices to the specified width.
+
+Fixes:
+	• The last point in a VectorPoints object is colored correctly when using VectorLine.SetColors.
+
+-----------
+
 Vectrosity 3.1.1
 
 Fixes:

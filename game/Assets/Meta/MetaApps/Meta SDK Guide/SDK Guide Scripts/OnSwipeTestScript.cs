@@ -10,16 +10,16 @@ using System.Collections;
 
 namespace Meta.Apps.SDKGuide
 {
-	public class OnSwipeTestScript : MetaBehaviour
+    public class OnSwipeTestScript : MonoBehaviour
 	{
 		public void OnSwipeLeft()
 		{
-			renderer.material.color = Color.red;
+			GetComponent<Renderer>().material.color = Color.red;
 		}
 
 		public void OnSwipeRight()
 		{
-			renderer.material.color = Color.green;
+			GetComponent<Renderer>().material.color = Color.green;
 		}
 	}
 }
