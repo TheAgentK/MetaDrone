@@ -1,8 +1,6 @@
-# meta_drone
+# nexGEN META-DRONE
 
-## What's It Do?
-
-meta_drone lets one control an AR.Drone 2.0 with Meta SpaceGlasses, an augmented reality headset.
+nexGEN META-DRONE lets one control an AR.Drone 2.0 with Meta SpaceGlasses, an augmented reality headset.
 
 ## How Do I Control It?
 
@@ -22,7 +20,9 @@ Pitch, or forwards movement, is controlled by the y position of one's left hand.
 
 ### Landing
 
-Landing, at the moment, is triggered when one makes a tight fist with both hands. Unfortunately, the tightness of one's hand often varies. Sometimes, the drone may not land. To land in an emergency, hit `Ctrl-C` in the command line.
+Landing, at the moment, is triggered when one makes a tight fist with both hands. Unfortunately, the tightness of one's hand often varies. 
+
+** Sometimes, the drone may not land. To land in an emergency, hit `Ctrl-C` in the command line. **
 
 ### Dead Zones
 
