@@ -1,10 +1,12 @@
 # nexGEN META-DRONE
+![alt text](http://meta-drone.siedentopp.eu/img/controle_02.jpg "Logo Title Text 1")
 
 nexGEN META-DRONE lets one control an AR.Drone 2.0 with Meta SpaceGlasses, an augmented reality headset.
 
 ## How Do I Control It?
 
 Everything should be visible through a HUD on the screen.
+[More information available here](http://meta-drone.siedentopp.eu/#control)
 
 ### Altitude
 
@@ -22,7 +24,7 @@ Pitch, or forwards movement, is controlled by the y position of one's left hand.
 
 Landing, at the moment, is triggered when one makes a tight fist with both hands. Unfortunately, the tightness of one's hand often varies. 
 
-** Sometimes, the drone may not land. To land in an emergency, hit `Ctrl-C` in the command line. **
+**Sometimes, the drone may not land. To land in an emergency, hit `Ctrl-C` in the command line.**
 
 ### Dead Zones
 
@@ -30,14 +32,24 @@ If you'd like the drone to not move, leave your hands in the middle of the axis 
 
 ## Using This
 
-To run the program, one will need an AR.Drone 2.0, Meta Glasses, and a computer. First, connect to the drone's wifi after powering the drone on. Run `game.exe` file in the `game` folder after plugging in and connecting the Meta Glasses. Then, once the GUI is visible, run the `main.js` file located in the `wss` directory. The drone should start to rise. Once it has taken off, you should be able to control the drone!
+To run the program, one will need 
+- an AR.Drone 2.0, 
+- Meta Glasses, 
+- and a computer. 
+
+First, 
+  1. connect to the drone's wifi after powering the drone on. 
+  2. Run `game.exe` file in the `game` folder after plugging in and connecting the Meta Glasses.
+  3. Then, once the GUI is visible, run the `main.js` file located in the `wss` directory. 
+  4. The drone start to rise after you open the left Hand and make a fist with the right Hand.
+  6. Once it has taken off, open both Hands and you should be able to control the drone!
 
 ## In Action
 
-A video of the drone in action can be seen [here](https://www.youtube.com/watch?v=8wBbOGdQtEM).
+Flight Demo 1 | Flight Demo 2
+------------- | -------------
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/oG0BTWE2OyM/0.jpg)](http://www.youtube.com/watch?v=oG0BTWE2OyM) | [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/khywcFAqvlM/0.jpg)](http://www.youtube.com/watch?v=khywcFAqvlM)
 
-Made by [Matthew Kaufer](http://github.com/mjkaufer), [Peter Rohrer](http://github.com/peterjrohrer), [Tarun Punnoose](http://github.com/tpunnoose), [Rohan Punnoose](http://github.com/rpunnoose), and [Sam Rohrer](http://github.com/srohrer32) at MHacks V. Winner of Best Virtual Reality hack.
+Further development by [Karsten Siedentopp](https://github.com/TheAgentK) at [Fachhoschule Stralsund](http://www.fh-stralsund.de).
 
-
-
-[More information available here](http://www.srohrer.me/meta_drone)
+[More information available here](http://meta-drone.siedentopp.eu)
