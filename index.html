@@ -1,109 +1,418 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/drone.png">
-    <meta name="description" content="META-DRONE – the future of drone control technology">
-    <meta name="author" content="Peter Rohrer">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>META-DRONE</title>
+    <title>nexGEN META-DRONE</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="theme/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-  </head>
+    <!-- Custom CSS -->
+    <link href="theme/css/landing-page.css" rel="stylesheet">
+    <link href="theme/css/metARdrone.css" rel="stylesheet">
 
-  <body>
+    <!-- Custom Fonts -->
+    <link href="theme/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- Static navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html">META-DRONE</a>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+    <!-- jQuery -->
+    <script src="theme/js/jquery.js"></script>
+
+</head>
+
+<body><a name="navigation"></a>    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">
+					nexGEN META-DRONE				</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li><a href="#theproject" class="text-uppercase">Das Projekt</a></li><li><a href="#gettingstarted" class="text-uppercase">Getting Started</a></li><li><a href="#inaction" class="text-uppercase">In Aktion</a></li><li><a href="#control" class="text-uppercase">Steuerung</a></li><li><a href="#aboutme" class="text-uppercase">Über mich</a></li><li><a href="#contact" class="text-uppercase">Kontakt</a></li>                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="video.html">In Action</a></li>
-            <li><a href="features.html">How it Works</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </div>
+        <!-- /.container -->
+    </nav>
 
-
-	<div id="headerwrap">
-	    <div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-					<h4>DRONE CONTROL</h4>
-					<h1>META-DRONE</h1>
-					<h4>LIKE YOU'VE NEVER FELT BEFORE</h4>
-				</div>
-			</div><! --/row -->
-	    </div> <!-- /container -->
-	</div><! --/headerwrap -->
-	
-	<section id="github"></section>
-	<div class="container-fluid">
-		<div class="row centered mt mb">
-            <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 gallery">
-                <h1 align="center">Winner</h1>
-                <h3 align="center">Best Virtual Reality Hack <br> MHacks V</h3>
-                <br>
-                <a href="http://http://mhacksv.challengepost.com/submissions/31762-meta-drone"><img src="assets/img/mhvlogo.png" class="img-responsive" width="500" height="500" align="center"></a>
-            </div>
-			<div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 gallery">
-                <h1>Check us out on GitHub!</h1>        
-				<a href="http://github.com/srohrer32/meta_drone"><img src="assets/img/github_logo.png" class="img-responsive" width="500" height="500" align="center"></a>
-			</div>
-		</div><! --/row -->
-	</div><! --/container -->
-    <section id="sponsor"></section>
-    <div class="container-fluid">
-        <div class="row centered mt mb">
-            <h1>Built with</h1>        
-            <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 gallery">
-                <a href="http://spaceglasses.com"><img src="assets/img/meta_logo.png" class="img-responsive"></a>
-            </div>
-            <div class="col-lg-3 col-lg-offset-2 col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 gallery">
-                <a href="http://parrot.com"><img src="assets/img/parrot_logo.png" class="img-responsive"></a>
-            </div>
-        </div><! --/row -->
-    </div><! --/container -->
-	
-    <div id="footerwrap">
-        <div class="container-fluid">
+<a name="pageheader"></a>    <!-- Header -->
+	<section class="content-section video-section">
+	  <div class="pattern-overlay">
+	  <a id="bgndVideo" class="player" data-property="{videoURL:'http://youtu.be/oG0BTWE2OyM',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}">bg</a>
+		<div class="container">
             <div class="row">
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p><b>CONTROL THE FUTURE</b></p>
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>nexGEN META-DRONE</h1>
+                        <h3>Drone Control your way!</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+							<a href="https://github.com/TheAgentK/MetaDrone" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i><span class="network-name">GitHub</span></a>
+
+                        </ul>
+                    </div>
                 </div>
-            
-                <div class="col-lg-4 col-lg-offset-2">
-                    <p>Built at MHacks V – January 2015</p>
+            </div>
+		</div>
+	  </div>
+	</section>
+	<!--Video Section Ends Here-->
+	<script type="text/javascript">
+	$( document ).ready(function() {
+
+		$(".player").mb_YTPlayer();
+
+	});
+	</script>
+	<!-- /.intro-header -->
+
+<a name="theproject"></a>    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">nexGEN META-DRONE</h2>
+                    <p class="lead">
+						ist als Projektarbeit im 8. Semester meines Studiums 
+						an der <a href="http://fh-stralsund.de/" target="_blank">Fachhochschule Stralsund</a> entstanden.
+						</br></br>
+						<strong>nexGEN META-DRONE</strong>
+						ist ein Fork des Projekts <a href="https://github.com/srohrer32/meta_drone" target="_blank">meta_drone</a>, welches von fünf Entwicklern während es 
+						<a href="http://mhacks.org/" target="_blank">MHacks V</a>	entwickelt wurde und dort im Bereich "Best Virual Reality Hack" gewonnen hat.
+						</br></br>
+						<strong>Mein Ziel war es die Steuerung und die Usebility zu verbessern.</strong>
+					</p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<div class="spacer"></div>
+					<div class="spacer"></div>
+					<img class="img-responsive" src="img/controle_01.jpg" alt="Meta 1">
                 </div>
             </div>
         </div>
-    </div><! --/footerwrap -->
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+<a name="gettingstarted"></a>    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+					<div class="spacer"></div>
+					<div class="spacer"></div>
+					<img class="img-responsive" src="img/controle_02.jpg" alt="Meta 1">
+					
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Getting Started</h2>
+                    <p class="lead short">
+						<strong>Was du brauchst:</strong>
+					</p>
+						<ul>
+							<li><a href="http://ardrone2.parrot.com/" target="_blank">Parrot AR.Drone 2.0</a></li>
+							<li><a href="https://www.getameta.com/" target="_blank">META 1 (Spaceglasses)</a></li>
+							<li><a href="https://nodejs.org/" target="_blank">Node.js</a></li>
+							<li>einen Computer</li>
+						</ul>
+					
+                    <p class="lead short">
+						<strong>Was du tun musst:</strong>
+					</p>
+						<ol>
+							<li>
+								Projekt von <a href="https://github.com/TheAgentK/MetaDrone" target="_blank">GitHub</a> herrunterladen
+							</li>
+							<li>
+								<a href="http://ardrone2.parrot.com/" target="_blank">Parrot AR.Drone 2.0</a>								mit dem PC verbinden
+							</li>
+							<li>
+								<a href="https://www.getameta.com/" target="_blank">META 1</a>								mit dem PC verbinden
+							</li>
+							<li>
+								evtl. die 
+								<a href="https://www.getameta.com/" target="_blank">META 1</a>								kalibrieren
+							</li>
+							<li>
+								Node.js-Script "wws/main.js" in einer Console ausführen <code>node main.js</code>
+							</li>
+							<li>
+								"/game/game.exe" ausführen
+							</li>
+							<li>
+								Flug genießen!!!
+							</li>
+						<ol>
+					<p class="lead">
+					</p>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+<a name="builtwith"></a>    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Verwendete Systeme</h2>
+                    <p class="lead">
+					
+					</p>
+                </div>
+            </div>
+			<div class="row builtwith">
+                <div class="col-lg-3 col-sm-6">
+					<a href="https://www.getameta.com/" target="_blank"><img class="img-responsive" src="img/meta_spaceglasses.jpg" alt="Meta 1"></a>                </div>
+				<div class="col-lg-3 col-sm-6">
+					<a href="http://ardrone2.parrot.com/" target="_blank"><img class="img-responsive" src="img/ardrone2.jpg" alt="Parrot AR.Drone 2.0"></a>                </div>
+				<div class="col-lg-3 col-sm-6">
+					<a href="https://github.com/felixge/node-ar-drone" target="_blank"><img class="img-responsive" src="img/node-ar-drone.jpg" alt="node-ar-drone"></a>                </div>
+				<div class="col-lg-3 col-sm-6">
+					<a href="http://unity3d.com/" target="_blank"><img class="img-responsive" src="img/unity_5.jpg" alt="Unity 5"></a>                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+<a name="inaction"></a>    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">In Aktion:</h2>
+                    <p class="lead">
+					</p>
+                </div>
+                <div class="col-lg-5 col-sm-6">
+                </div>
+            </div>
+			<div class="row">
+                <div class="col-lg-5 col-sm-6">
+					<div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/oG0BTWE2OyM" allowfullscreen=""></iframe>
+					</div>
+                </div>
+				<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+					<div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="//www.youtube.com/embed/khywcFAqvlM" allowfullscreen=""></iframe>
+					</div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+<a name="control"></a>  <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Steuerung</h2>
+					<p class="lead">
+					Die Meta 1 ist eine Augmented Reality (AR) Brille, durch die dem Träger eine noch natürlichere Steuerung des Quadrocopters Parrot Ar.Drone 2.0 ermöglicht wird.
+					</p>
+					<p class="lead">
+						Rechte Hand:
+					</p>
+					<ul>
+						<li><a href="gesten_rechts_oben" class="gesten" >Hoch</a></li>
+						<li><a href="gesten_rechts_unten" class="gesten">Runter</a></li>
+						<li><a href="gesten_rechts_rechts" class="gesten">Rotation CW (rechts)</a></li>
+						<li><a href="gesten_rechts_links" class="gesten">Rotation CCW (links)</a></li>
+					</ul>
+					<p class="lead">
+						Linke Hand:
+					</p>
+					<ul>
+						<li><a href="gesten_links_vor" class="gesten">Vor</a></li>
+						<li><a href="gesten_links_zureuck" class="gesten">Zurück</a></li>
+					</ul>
+					<script type="text/javascript">
+					$('a.gesten').click(function(event){
+						event.preventDefault();
+					});
+					$('a.gesten').hover(function(event){
+						var img = "#" + $( this ).attr("href");
+						$("#gesten").addClass("hide");
+						$(img).removeClass("hide");
+					}, function() {
+						var img = "#" + $( this ).attr("href");
+						$("#gesten").removeClass("hide");
+						$(img).addClass("hide");
+					}
+					
+					);
+					</script>
+                </div>
+                <div class="col-lg-8 col-sm-6">
+                    <img src="img/gesten/gesten.png" class="gesten img-responsive" alt="Responsive image" id="gesten">
+                    <img src="img/gesten/gesten_links_vor.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_links_vor">
+                    <img src="img/gesten/gesten_links_zureuck.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_links_zureuck">
+                    <img src="img/gesten/gesten_rechts_oben.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_rechts_oben">
+                    <img src="img/gesten/gesten_rechts_unten.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_rechts_unten">
+                    <img src="img/gesten/gesten_rechts_links.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_rechts_links">
+                    <img src="img/gesten/gesten_rechts_rechts.png" class="gesten img-responsive hide" alt="Responsive image" id="gesten_rechts_rechts">
+                </div>
+            </div>
+
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+<a name="aboutme"></a>    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">
+						Über mich					</h2>
+                    <p class="lead">
+					</p>
+                </div>
+            </div>
+		</div>
+		<div class="container madeby" style="margin-top: 20px; margin-bottom: 20px;">
+			<div class="row panel">
+				<div class="col-md-4 bg_blur ">
+					<a href="https://twitter.com/The_agent_K" class="follow_btn hidden-xs" target="_blank">Follow</a>
+				</div>
+				<div class="col-md-8  col-xs-12">
+				   <img src="img/profil_avatar.jpg" class="img-thumbnail picture hidden-xs" />
+				   <img src="img/profil_avatar.jpg" class="img-thumbnail visible-xs picture_mob" />
+				   <div class="header">
+						<h1>Karsten Siedentopp</h1>
+						<h4>Student der Angewandte Informatik - Softwareentwicklung und Medieninformatik</h4>
+						<span>
+							Ich habe diese Steuerung im Rahmen meiner Projektarbeit im 8. Semester an der Fachhochschule Stralsund entwickelt.
+						</span>
+				   </div>
+				</div>
+			</div>   
+			
+			<div class="row nav">    
+				<div class="col-md-4"></div>
+				<div class="col-md-8 col-xs-12" style="margin: 0px;padding: 0px;">
+					<div class="col-md-4 col-xs-4 well">
+						<a href="https://twitter.com/The_agent_K" target="_blank">
+							<i class="fa fa-twitter-square"></i> Twitter
+						</a>
+					</div>
+					<div class="col-md-4 col-xs-4 well">
+						<a href="https://www.facebook.com/The.Agent.K" target="_blank">
+							<i class="fa fa-facebook-square"></i> Facebook
+						</a>
+					</div>
+					<div class="col-md-4 col-xs-4 well">
+						<a href="https://github.com/TheAgentK" target="_blank">
+							<i class="fa fa-github-square"></i> GitHub
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+<a name="contact"></a>    <div class="banner">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>Connect to nexGEN META-DRONE:</h2>
+                </div>
+                <div class="col-lg-6">
+                    <ul class="list-inline banner-social-buttons">
+						<a href="https://github.com/TheAgentK/MetaDrone" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i><span class="network-name">GitHub</span></a>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.banner -->
+
+<a name="pagefooter"></a>    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="list-inline">
+						<li><a href="#pageheader">Home</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#theproject">Das Projekt</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#gettingstarted">Getting Started</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#inaction">In Aktion</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#control">Steuerung</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#aboutme">Über mich</a></li><li class="footer-menu-divider">&sdot;</li><li><a href="#contact">Kontakt</a></li>                    </ul>
+				</div>
+            </div>
+            <div class="row copyright">
+                <div class="col-lg-6">
+                    <p class="text-muted small">Copyright &copy; Karsten Siedentopp 2014. All Rights Reserved</p>
+                </div>
+				<div class="col-lg-6 text-right">
+					<p class="text-muted small">Projektarbeit 2015 an der Fachhoschule Stralsund</p>
+				</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="theme/js/bootstrap.min.js"></script>
 	
+	<!-- Bootrsapt fullscreen backgorund Video -->
+	<script src="http://pupunzi.com/mb.components/mb.YTPlayer/demo/inc/jquery.mb.YTPlayer.js"></script>
 
+</body>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
 </html>
