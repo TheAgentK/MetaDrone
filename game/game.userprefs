@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HandTrackingRight.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MetaDrone\HandTracking.cs">
     <Files>
-      <File FileName="Assets\HandTracking.cs" Line="194" Column="3" />
-      <File FileName="Assets\StartDrone.cs" Line="68" Column="31" />
-      <File FileName="Assets\HandTrackingLeft.cs" Line="1" Column="1" />
-      <File FileName="Assets\HandTrackingRight.cs" Line="1" Column="1" />
+      <File FileName="Assets\MetaDrone\HandTracking.cs" Line="163" Column="17" />
+      <File FileName="Assets\MetaDrone\HandTrackingLeft.cs" Line="9" Column="5" />
+      <File FileName="Assets\MetaDrone\HandTrackingRight.cs" Line="9" Column="29" />
+      <File FileName="Assets\MetaDrone\StartDrone.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

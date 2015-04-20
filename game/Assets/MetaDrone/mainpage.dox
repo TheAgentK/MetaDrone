@@ -1,0 +1,12 @@
+/**
+\mainpage nexGEN META-DRONE
+
+ist als Projektarbeit im 8. Semester meines Studiums 
+an der <a href="http://fh-stralsund.de/" target="_blank">Fachhochschule Stralsund</a> entstanden.
+<br><br>
+<strong>nexGEN META-DRONE</strong>
+ist ein Fork des Projekts <a href="https://github.com/srohrer32/meta_drone" target="_blank">meta_drone</a>, welches von fünf Entwicklern während es 
+<a href="http://mhacks.org/" target="_blank">MHacks V</a>	entwickelt wurde und dort im Bereich "Best Virual Reality Hack" gewonnen hat.
+<br><br>
+<strong>Mein Ziel war es die Steuerung und die Usebility zu verbessern.</strong>
+*/

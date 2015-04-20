@@ -143,15 +143,17 @@
      <None Include="Assets\Meta\MetaDocs\META EULA.txt" />
      <None Include="Assets\Meta\MetaSpace\Shaders\Particle AddMeta.shader" />
      <None Include="Assets\Meta\MetaSpace\MetaFonts\Arial Bold\3DTextTextured.shader" />
+     <None Include="Assets\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
+     <None Include="Assets\Editor\Doxygen\ReadMe.txt" />
      <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Vectrosity">
- <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/meta_drone-ksi/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
+ <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
- <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/meta_drone-ksi/game/Assets/MetaDLL/Meta.dll</HintPath>
+ <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/MetaDLL/Meta.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -46,12 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\HandTracking.cs" />
-     <Compile Include="Assets\HandTrackingLeft.cs" />
-     <Compile Include="Assets\HandTrackingRight.cs" />
-     <Compile Include="Assets\HandTrackingSingle.cs" />
-     <Compile Include="Assets\HandTrackingVektor.cs" />
-     <Compile Include="Assets\Kill.cs" />
      <Compile Include="Assets\Meta\Examples\Scripts\CameraFeedExample.cs" />
      <Compile Include="Assets\Meta\Examples\Scripts\MarkerTrackerExample.cs" />
      <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\GazeableTestScript.cs" />
@@ -60,9 +54,10 @@
      <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnPinchTestScript.cs" />
      <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnSwipeTestScript.cs" />
      <Compile Include="Assets\Meta\MetaApps\Meta SDK Guide\SDK Guide Scripts\OnTouchEnterTestScript.cs" />
-     <Compile Include="Assets\OnGrabDroneScript.cs" />
-     <Compile Include="Assets\StartDrone.cs" />
-     <Compile Include="Assets\WSS.cs" />
+     <Compile Include="Assets\MetaDrone\HandTracking.cs" />
+     <Compile Include="Assets\MetaDrone\HandTrackingLeft.cs" />
+     <Compile Include="Assets\MetaDrone\HandTrackingRight.cs" />
+     <Compile Include="Assets\MetaDrone\StartDrone.cs" />
      <None Include="Assets\Plugins\SocketIO\JSONObject\readme.txt" />
      <None Include="Assets\Plugins\SocketIO\readme.txt" />
      <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingBlur.shader" />
@@ -79,15 +74,17 @@
      <None Include="Assets\Meta\MetaDocs\META EULA.txt" />
      <None Include="Assets\Meta\MetaSpace\Shaders\Particle AddMeta.shader" />
      <None Include="Assets\Meta\MetaSpace\MetaFonts\Arial Bold\3DTextTextured.shader" />
+     <None Include="Assets\Editor\Doxygen\Resources\BaseDoxyfile.txt" />
+     <None Include="Assets\Editor\Doxygen\ReadMe.txt" />
      <None Include="Assets\Meta Packages\HighlightingSystem\Resources\HighlightingStencilTransparentZ.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Vectrosity">
- <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/meta_drone-ksi/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
+ <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
- <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/meta_drone-ksi/game/Assets/MetaDLL/Meta.dll</HintPath>
+ <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/MetaDLL/Meta.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
