@@ -124,12 +124,16 @@ public class HandTracking
 		private float positionCenterZ = 0.4f;
 
 		/// <summary>
-		/// The position center.
+		/// Variable zur bestimmung welche Frame zur erkennung der Handbewegung genutzt werden soll.
+		/// Mit dem Wert 2 wird jedes 2te Frame fallen gelassen und nicht berücksichtigt
+		/// Dadurch werden bereits kleinere Fehlbewegungen der Hand herrausgefiltert
+		/// @warning Wert sollte nur verändert werden, wenn man weiß was man tut.
 		/// </summary>
 		private int frameDelay = 2;
 
 		/// <summary>
-		/// The position center.
+		/// Variable zum zählen der Frames
+		/// @warning Der Wert wird automatisch gesetzt
 		/// </summary>
 		private int frameDelayCounter = 0;
 
@@ -142,6 +146,7 @@ public class HandTracking
 		/// <summary>
 		/// True wenn Hand in Bewegung
 		/// False wenn Hand nicht mehr bewegt wird.
+		/// @warning Der Wert wird automatisch gesetzt
 		/// </summary>
 		private bool stopped = false;
 	
@@ -158,27 +163,35 @@ public class HandTracking
 		/// Update() wird bei jedem Frame aufgerufen.
 		/// @brief Hier findet die eigentlich Steuerung statt
 		/// </summary>
+		
 		public void Update ()
 		{
 				setStartPosition ();
 				//centerVectorText.text = isGrabed + " | " + positionCenter.x.ToString("F2") + " | " + positionCenter.y.ToString("F2");
-
+				
 				Hand[] hands = Meta.Hands.GetHands ();
 				if (hands.Length > 0 && frameDelayCounter == frameDelay) {
+						
 						frameDelayCounter = 0;
+						
+						/// Prüfte ob die Variable hand überhaupt gesetzt ist und ob die Hand im Sichtbereich der META 1 Brille ist.
+						/// zusätzlich wird geprüft ob die zu erkennende Hand geöffnet ist und ob die Drone üb erhaupt gestartet ist
+						
 						if (hand != null && hand.isValid && (hand.gesture.type.Equals (MetaGesture.OPEN) && canStart)) {
 								isGrabed = true;
 
 								Vector3 position = hand.palm.position;
-				
+
+								/// Positionsparameter der Hand mit welcher gesteuert werden soll
 								float xPos = position.x;
 								float yPos = position.y;
 								float zPos = position.z;
-				
+
 								float xPosDist = positionCenter.x;
 								float yPosDist = positionCenter.y;
 								float zPosDist = positionCenterZ;
 
+								/// Bereich definieren, ab dem die Handbewegung als solche erkannt werden soll
 								float greaterX = xPosDist + 0.04f;
 								float lessX = xPosDist - 0.04f;
 								float greaterY = yPosDist + 0.04f;
@@ -186,10 +199,15 @@ public class HandTracking
 								float greaterZ = zPosDist + 0.045f;
 								float lessZ = zPosDist - 0.045f;
 
+								/// Ausgabe der Positionsvektoren der Hand und des aktuellen Mittelpunktes
+								/// Dies ist nur zu Debug Zwecken
 								palmVectorText.text = lessX.ToString ("F2") + " < " + xPos.ToString ("F2") + " < " + greaterX.ToString ("F2");
 								centerVectorText.text = lessY.ToString ("F2") + " < " + yPos.ToString ("F2") + " < " + greaterY.ToString ("F2");
 
+								/// Prüfe ob die zweite Hand auch geöffnet ist, damit die Steuerung nur funktioniert, wenn beide Hände geöffnet sind
 								if (otherHand.gesture.type.Equals (MetaGesture.OPEN) && canStart) {
+										
+										/// Auswerten der Handbewegungen und trigern des jeweiligen Events zur steuerung des Quadrocopters
 										if (xPos > greaterX && actionRight != "") {
 												// Hand rechts
 												stopped = false;

@@ -81,10 +81,10 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Vectrosity">
- <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
+ <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/nexGEN-META-DRONE/game/Assets/Meta Packages/Vectrosity/Vectrosity.dll</HintPath>
  </Reference>
  <Reference Include="Meta">
- <HintPath>D:/__onlineStorage/GIT/MetaDrone/game/Assets/MetaDLL/Meta.dll</HintPath>
+ <HintPath>C:/Users/Praktikum/Desktop/MetaDrone/nexGEN-META-DRONE/game/Assets/MetaDLL/Meta.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
