@@ -5,82 +5,102 @@ using SocketIO;
 using UnityEngine.UI;
 
 /// <summary>
-/// The Class for Right Handtracking
+/// Bewegungserkennung der rechten Hand
+/// @brief Übergabe aller steuerungsaktionen und aller HUD Objekte an HandTracking()
 /// @implements HandTracking
 /// </summary>
 /// <see cref="HandTracking">
-public class HandTrackingRight : MonoBehaviour {
-
-	private HandTracking tracking = new HandTracking();
-
-	/// <summary>
-	/// The arrow rotate left.
-	/// </summary>
-	public MeshRenderer arrowRotateLeft;
-	/// <summary>
-	/// The arrow rotate right.
-	/// </summary>
-	public MeshRenderer arrowRotateRight;
-	/// <summary>
-	/// The arrow up.
-	/// </summary>
-	public MeshRenderer arrowUp;
-	/// <summary>
-	/// The arrow down.
-	/// </summary>
-	public MeshRenderer arrowDown;
-	/// <summary>
-	/// The arrow center.
-	/// </summary>
-	public MeshRenderer arrowCenter;
-
-	/// <summary>
-	/// Text object to display Debug Informations about the Position Vector
-	/// </summary>
-	public Text centerVector;
-	/// <summary>
-	/// Text Object to display Debug Informations about the Palm Position Vector
-	/// </summary>
-	public Text palmVector;
-
-	/// <summary>
-	/// The Center Position to calculate the Hand movments
-	/// </summary>
-	public Transform positionCenter;
-
-	/// <summary>
-	/// Variable to
-	/// </summary>
-	public bool canStart = false;
-
-	// Use this for initialization
-	void Start () {
-		tracking.hand = Meta.Hands.right;
-		tracking.otherHand = Meta.Hands.left;
-
-		tracking.socket = gameObject.GetComponent<SocketIOComponent>();
-
-		tracking.arrowLeft = arrowRotateLeft;
-		tracking.arrowRight = arrowRotateRight;
-		tracking.arrowUp = arrowUp;
-		tracking.arrowDown = arrowDown;
-		tracking.arrowCenter = arrowCenter;
-
-		tracking.actionUp = "rise";
-		tracking.actionDown = "fall";
-		tracking.actionLeft = "left";
-		tracking.actionRight = "right";
-		
-		tracking.palmVectorText = palmVector;
-		tracking.centerVectorText = centerVector;
-
-		tracking.Start ();
-	}
+public class HandTrackingRight : MonoBehaviour
+{
 	
-	// Update is called once per frame
-	void Update () {
-		tracking.canStart = GetComponent<StartDrone>().isStarted;
-		tracking.positionCenter = positionCenter.position;
-		tracking.Update ();
-	}
+		/// <summary>
+		/// HandTracking() Objekt zur schlussendlichen steuerung
+		/// </summary>
+		private HandTracking tracking = new HandTracking ();
+
+		/// <summary>
+		/// HUD-Objekt Pfeil nach Links
+		/// </summary>
+		public MeshRenderer arrowRotateLeft;
+
+		/// <summary>
+		/// HUD-Objekt Pfeil nach Rechts
+		/// </summary>
+		public MeshRenderer arrowRotateRight;
+	
+		/// <summary>
+		/// HUD-Objekt Pfeil nach Oben
+		/// </summary>
+		public MeshRenderer arrowUp;
+	
+		/// <summary>
+		/// HUD-Objekt Pfeil nach Unten
+		/// </summary>
+		public MeshRenderer arrowDown;
+	
+		/// <summary>
+		/// HUD-Objekt Mittelpunkt
+		/// </summary>
+		public MeshRenderer arrowCenter;
+
+		/// <summary>
+		/// Text-Objekt auf MGUI.Stats zur Ausgabe des Trackingmittelpunktes
+		/// @warning Nur zum Debugen
+		/// </summary>
+		public Text centerVector;
+
+		/// <summary>
+		/// Text-Objekt auf MGUI.Stats zur Ausgabe des Handmittelpunkts
+		/// @warning Nur zum Debugen
+		/// </summary>
+		public Text palmVector;
+
+		/// <summary>
+		/// Trackingmittelpunkt
+		/// </summary>
+		public Transform positionCenter;
+
+		/// <summary>
+		/// Dronensteuerung ist erlaubt oder nicht
+		/// @see StartDrone
+		/// </summary>
+		public bool canStart = false;
+
+		/// <summary>
+		/// Inizialisierung des HandTracking Objekts mit allen nötigen Informationen
+		/// </summary>
+		void Start ()
+		{
+				tracking.hand = Meta.Hands.right;
+				tracking.otherHand = Meta.Hands.left;
+
+				tracking.socket = gameObject.GetComponent<SocketIOComponent> ();
+
+				tracking.arrowLeft = arrowRotateLeft;
+				tracking.arrowRight = arrowRotateRight;
+				tracking.arrowUp = arrowUp;
+				tracking.arrowDown = arrowDown;
+				tracking.arrowCenter = arrowCenter;
+
+				tracking.actionUp = "rise";
+				tracking.actionDown = "fall";
+				tracking.actionLeft = "left";
+				tracking.actionRight = "right";
+		
+				tracking.palmVectorText = palmVector;
+				tracking.centerVectorText = centerVector;
+
+				tracking.Start ();
+		}
+
+		/// <summary>
+		/// Update() wird bei jedem Frame aufgerufen.
+		/// @brief Hier findet die eigentlich Steuerung statt
+		/// </summary>
+		void Update ()
+		{
+				tracking.canStart = GetComponent<StartDrone> ().isStarted;
+				tracking.positionCenter = positionCenter.position;
+				tracking.Update ();
+		}
 }

@@ -5,7 +5,8 @@ using SocketIO;
 using UnityEngine.UI;
 
 /// <summary>
-/// Klasse zum tracken einer Hand
+/// Bewegungserkennung und darauf bezogenen Reaktionen einer Hand
+/// @brief Die zu erkennende Hand muss vorher übergeben werden.
 /// @author Karsten Siedentopp
 /// @date 20.04.2015
 /// @warning Die Gestensteuerung ist bisher nicht sehr präzise
@@ -320,14 +321,17 @@ public class HandTracking
 
 				frameDelayCounter++;
 		}
-
+	
 		private void setStartPosition ()
 		{
 				if (isGrabed == false) {
 						//positionCenterZ = hand.palm.position.z;
 				}
 		}
-	
+
+		/// <summary>
+		/// Setzte alle Objekte des HUDs auf die gleiche Farbe
+		/// </summary>
 		private void setColorToAll (Color _color)
 		{
 				if (canStart)
@@ -341,42 +345,63 @@ public class HandTracking
 				setColorBackward (_color);
 		}
 
+		/// <summary>
+		/// Setzte die Farbe des Mittelpunkts
+		/// </summary>
 		private void setColorCenter (Color _color)
 		{
 				if (arrowCenter != null)
 						arrowCenter.material.color = _color;
 		}
 
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Oben
+		/// </summary>
 		private void setColorUp (Color _color)
 		{
 				if (arrowUp != null)
 						arrowUp.material.color = _color;
 		}
-
+	
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Unten
+		/// </summary>
 		private void setColorDown (Color _color)
 		{
 				if (arrowDown != null)
 						arrowDown.material.color = _color;
 		}
-
+	
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Links
+		/// </summary>
 		private void setColorLeft (Color _color)
 		{
 				if (arrowLeft != null)
 						arrowLeft.material.color = _color;
 		}
-
+	
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Rechts
+		/// </summary>
 		private void setColorRight (Color _color)
 		{
 				if (arrowRight != null)
 						arrowRight.material.color = _color;
 		}
-
+	
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Vorne
+		/// </summary>
 		private void setColorForward (Color _color)
 		{
 				if (arrowForward != null)
 						arrowForward.material.color = _color;
 		}
-
+	
+		/// <summary>
+		/// Setzte die Farbe des Pfeils nach Hinten
+		/// </summary>
 		private void setColorBackward (Color _color)
 		{
 				if (arrowBackward != null)

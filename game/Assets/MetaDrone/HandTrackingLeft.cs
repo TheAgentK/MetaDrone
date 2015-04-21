@@ -5,70 +5,88 @@ using SocketIO;
 using UnityEngine.UI;
 
 /// <summary>
-/// The Class for Left Handtracking
+/// Bewegungserkennung der linken Hand
+/// @brief Übergabe aller steuerungsaktionen und aller HUD Objekte an HandTracking()
 /// @implements HandTracking
 /// </summary>
 /// <see cref="HandTracking">
-public class HandTrackingLeft : MonoBehaviour {
+public class HandTrackingLeft : MonoBehaviour
+{
 
-	private HandTracking tracking = new HandTracking();
+		/// <summary>
+		/// HandTracking() Objekt zur schlussendlichen steuerung
+		/// </summary>
+		private HandTracking tracking = new HandTracking ();
 	
-	/// <summary>
-	/// The arrow forward.
-	/// </summary>
-	public MeshRenderer arrowForward;
-	/// <summary>
-	/// The arrow backward.
-	/// </summary>
-	public MeshRenderer arrowBackward;
-	/// <summary>
-	/// The arrow center.
-	/// </summary>
-	public MeshRenderer arrowCenter;
+		/// <summary>
+		/// HUD-Objekt Pfeil nach vorne
+		/// </summary>
+		public MeshRenderer arrowForward;
 
-	/// <summary>
-	/// The center vector.
-	/// </summary>
-	public Text centerVector;
-	/// <summary>
-	/// The palm vector.
-	/// </summary>
-	public Text palmVector;
+		/// <summary>
+		/// HUD-Objekt Pfeil nach hinten
+		/// </summary>
+		public MeshRenderer arrowBackward;
 
-	/// <summary>
-	/// The position center.
-	/// </summary>
-	public Transform positionCenter;
+		/// <summary>
+		/// HUD-Objekt Mittelpunkt
+		/// </summary>
+		public MeshRenderer arrowCenter;
 
-	/// <summary>
-	/// The can start.
-	/// </summary>
-	public bool canStart = false;
+		/// <summary>
+		/// Text-Objekt auf MGUI.Stats zur Ausgabe des Trackingmittelpunktes
+		/// @warning Nur zum Debugen
+		/// </summary>
+		public Text centerVector;
 
-	// Use this for initialization
-	void Start () {
-		tracking.hand = Meta.Hands.left;
-		tracking.otherHand = Meta.Hands.right;
+		/// <summary>
+		/// Text-Objekt auf MGUI.Stats zur Ausgabe des Handmittelpunkts
+		/// @warning Nur zum Debugen
+		/// </summary>
+		public Text palmVector;
 
-		tracking.socket = gameObject.GetComponent<SocketIOComponent>();
+		/// <summary>
+		/// Trackingmittelpunkt
+		/// </summary>
+		public Transform positionCenter;
 
-		tracking.arrowForward = arrowForward;
-		tracking.arrowBackward = arrowBackward;
-		tracking.arrowCenter = arrowCenter;
+		/// <summary>
+		/// Dronensteuerung ist erlaubt oder nicht
+		/// @see StartDrone
+		/// </summary>
+		public bool canStart = false;
 
-		tracking.actionForward = "forwards";
-		tracking.actionBackward = "backwards";
+		/// <summary>
+		/// Inizialisierung des HandTracking Objekts mit allen nötigen Informationen
+		/// </summary>
+		void Start ()
+		{
+				tracking.hand = Meta.Hands.left;
+				tracking.otherHand = Meta.Hands.right;
+
+				tracking.socket = gameObject.GetComponent<SocketIOComponent> ();
+
+				tracking.arrowForward = arrowForward;
+				tracking.arrowBackward = arrowBackward;
+				tracking.arrowCenter = arrowCenter;
+
+				tracking.actionForward = "forwards";
+				tracking.actionBackward = "backwards";
 		
-		tracking.palmVectorText = palmVector;
-		tracking.centerVectorText = centerVector;
+				tracking.palmVectorText = palmVector;
+				tracking.centerVectorText = centerVector;
 
-		tracking.Start ();
-	}
+				tracking.Start ();
+		}
 	
-	// Update is called once per frame
-	void Update () {
-		tracking.canStart = GetComponent<StartDrone>().isStarted;
-		tracking.positionCenter = positionCenter.position;
-		tracking.Update ();
-	}
+		/// <summary>
+		/// Update() wird bei jedem Frame aufgerufen.
+		/// @brief Hier findet die eigentlich Steuerung statt
+		/// </summary>
+		void Update ()
+		{
+				tracking.canStart = GetComponent<StartDrone> ().isStarted;
+				tracking.positionCenter = positionCenter.position;
+				tracking.Update ();
+		}
 }
