@@ -1,12 +1,12 @@
 # nexGEN META-DRONE
-![alt text](http://meta-drone.siedentopp.eu/img/controle_02.jpg "Logo Title Text 1")
+![alt text](http://theagentk.github.io/nexGEN-META-DRONE/img/controle_02.jpg "Logo Title Text 1")
 
 nexGEN META-DRONE lets one control an AR.Drone 2.0 with Meta SpaceGlasses, an augmented reality headset.
 
 ## How do I control it?
 
 Everything should be visible through a HUD on the screen.
-[More information available here](http://meta-drone.siedentopp.eu/#control)
+[More information available here](http://theagentk.github.io/nexGEN-META-DRONE/#control)
 
 ### Altitude
 
@@ -51,4 +51,4 @@ Flight demo 1 | Flight demo 2
 
 Further development by [Karsten Siedentopp](https://github.com/TheAgentK) at [University of Applied Siences Stralsund](http://www.fh-stralsund.de).
 
-[More information available here](http://meta-drone.siedentopp.eu)
+[More information available here](http://theagentk.github.io/nexGEN-META-DRONE)
